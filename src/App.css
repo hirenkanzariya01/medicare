@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --text-green: #009A63;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mainNavbar {
+  background-color: rgb(255, 255, 255);
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 22px;
+      color: var(--text-green);
+    }
+
+    p {
+      font-size: 12px;
+      margin: 0;
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.navContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between !important;
+  height: 80px;
+}
+
+
+.navBarLinks {
+  box-shadow: 0px 0px 5px var(--text-green);
+  border-radius: 30px;
+  padding: 5px 25px 5px 25px !important;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 20px;
+}
+
+.navButtons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  button {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 30px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .AdminBtn {
+    background-color: white;
+    border: 2px solid var(--text-green);
+    transition: 0.5s;
+  }
+
+  .AdminBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 20px #009a6445;
+  }
+
+  .loginBtn {
+    background:linear-gradient(to right ,#15db96ee , #009a64e1);
+    /* border: 2px solid white; */
+    border: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.5s;
+    padding: 10px 30px;
+    box-shadow: 0 0 20px #009a6484;
+  }
+
+  .loginBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 20px #009a6445;
   }
 }

@@ -2,38 +2,37 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../images/logo.webp'
+import { CiUser } from "react-icons/ci";
+import { FiKey } from "react-icons/fi";
+import { FaRegUser } from "react-icons/fa";
+
 
 function BootstrapNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+    <Navbar collapseOnSelect expand="lg" >
+      <Container className='navContainer'>
+        <div className="logo">
+          <img src={logo} alt="" />
+          <div className="logoText">
+            <h3>MediCare</h3>
+            <p>HealthCare Solution</p>
+          </div>
+        </div>
+
+        <Nav className="navBarLinks">
+          <Nav.Link href="#features">Home</Nav.Link>
+          <Nav.Link href="#pricing">doctor</Nav.Link>
+          <Nav.Link href="#pricing">Services</Nav.Link>
+          <Nav.Link href="#pricing">Appoiments</Nav.Link>
+          <Nav.Link href="#pricing">Contact</Nav.Link>
+        </Nav>
+        <div className='navButtons'>
+          <button className='AdminBtn'><FaRegUser style={{ margin: "5px" }} />Doctor Admine </button>
+          <button className='loginBtn px-3'><FiKey style={{ margin: "5px" }} />Login</button>
+        </div>
       </Container>
-    </Navbar>
+    </Navbar >
   );
 }
 
