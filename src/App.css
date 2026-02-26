@@ -10,7 +10,7 @@
 
 .mainNavbar {
   background-color: rgb(255, 255, 255);
-
+  border-bottom: 1px solid var(--text-green);
 
   .logo {
     display: flex;
@@ -77,7 +77,7 @@
   }
 
   .loginBtn {
-    background:linear-gradient(to right ,#15db96ee , #009a64e1);
+    background: linear-gradient(to right, #15db96ee, #009a64e1);
     /* border: 2px solid white; */
     border: none;
     color: white;
@@ -90,5 +90,89 @@
   .loginBtn:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 20px #009a6445;
+  }
+}
+
+.mainHeroSection {
+
+  
+  margin: 40px 130px;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  justify-content: space-between;
+
+  .heroHeading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(to right, #15db96ee, #009a64e1);
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .heading {
+      h1 {
+        font-size: 50px;
+        margin: 0;
+
+        span {
+          color: var(--text-green);
+        }
+      }
+
+      p {
+        color: orange;
+      }
+    }
+
+  }
+
+  .firsTitle {
+    font-weight: 400;
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .secondTitle {
+    font-weight: 700;
+    color: var(--text-green);
+    padding-bottom: 20px;
+  }
+
+  .facitilies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .btn {
+      background: linear-gradient(to right, #15db96ee, #009a64e1);
+      color: white;
+      border-radius: 30px;
+      padding: 10px 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    .redBtn {
+      background-color:#FF8385;
+      border: 2px solid red;
+      color: rgb(186, 14, 14);
+      border-radius: 30px;
+      padding: 12px 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
   }
 }
