@@ -93,9 +93,47 @@
   }
 }
 
-.mainHeroSection {
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 
-  
+
+
+.moving-border {
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.moving-border::before,
+.moving-border::after {
+  content: "";
+  border-radius: 30px;
+  position: absolute;
+  inset: -0.1rem;
+  z-index: -1;
+  background: linear-gradient(var(--angle),
+      white, #15db96ee, white, #009a64e1);
+  animation: rotate 10s linear infinite;
+}
+
+.moving-border::after {
+  filter: blur(10px);
+}
+
+@keyframes rotate {
+  0% {
+    --angle: 0deg;
+  }
+
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.mainHeroSection {
   margin: 40px 130px;
   border-radius: 30px;
   padding: 40px;
@@ -165,7 +203,7 @@
     }
 
     .redBtn {
-      background-color:#FF8385;
+      background-color: #FF8385;
       border: 2px solid red;
       color: rgb(186, 14, 14);
       border-radius: 30px;

@@ -14,7 +14,7 @@ import { IoCallOutline } from "react-icons/io5";
 
 function HeroSection() {
   return (
-    <div className='mainHeroSection'>
+    <div className='mainHeroSection moving-border'>
 
       <div className="left">
         <div className="heroHeading">
