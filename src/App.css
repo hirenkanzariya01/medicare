@@ -214,3 +214,50 @@
     }
   }
 }
+
+.certificedSection {
+  h1{
+    text-align: center;
+    font-size: 52px;
+    color: var(--text-green);
+  }
+
+  .tagline{
+    border: 2px solid var(--text-green);
+    padding: 10px 20px ;
+    border-radius: 30px ;
+    margin: auto;
+    width: 230px;
+    margin-bottom: 50px;
+
+    background-color: #009a641b;
+    color: var(--text-green);
+    .dot{
+      font-size:18px ;
+      background-color:#009a6469;
+      color:#009a6469;
+      border-radius: 50%;
+      margin-bottom: 3px;
+    }
+  }
+  p{
+    text-align: center;
+    padding: 10px;
+    color: #ccc;
+    font-size: 20px;
+  }
+  .certificate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .merquee {
+      display: flex;
+      align-items: end !important;
+    }
+
+    img {
+      width: 60px;
+    }
+  }
+}
