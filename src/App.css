@@ -216,36 +216,45 @@
 }
 
 .certificedSection {
-  h1{
+  margin: 0 130px;
+
+  .line {
+    color: #009a64b6;
+  }
+
+  h1 {
     text-align: center;
     font-size: 52px;
     color: var(--text-green);
   }
 
-  .tagline{
+  .tagline {
     border: 2px solid var(--text-green);
-    padding: 10px 20px ;
-    border-radius: 30px ;
+    padding: 10px 20px;
+    border-radius: 30px;
     margin: auto;
     width: 230px;
     margin-bottom: 50px;
 
     background-color: #009a641b;
     color: var(--text-green);
-    .dot{
-      font-size:18px ;
-      background-color:#009a6469;
-      color:#009a6469;
+
+    .dot {
+      font-size: 18px;
+      background-color: #009a6469;
+      color: #009a6469;
       border-radius: 50%;
       margin-bottom: 3px;
     }
   }
-  p{
+
+  p {
     text-align: center;
     padding: 10px;
     color: #ccc;
     font-size: 20px;
   }
+
   .certificate {
     display: flex;
     flex-direction: column;
@@ -258,6 +267,80 @@
 
     img {
       width: 60px;
+    }
+  }
+}
+
+.medicalTeam {
+  background-color: #EFF9FA;
+  margin: 50px 0;
+  padding: 50px 130px;
+
+  h1 {
+    text-align: center;
+    font-size: 52px;
+
+    span {
+      color: var(--text-green);
+    }
+  }
+
+  p {
+    font-size: 18px;
+    color: #0000008c;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+    .drcard {
+      width: 280px;
+      background-color: white;
+      border-radius: 30px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 18px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      padding: 10px;
+
+      img {
+        width: 100%;
+        border-radius: 30px;
+      }
+
+      h2 {
+        font-size: 22px;
+        padding: 10px 0px 0px 10px;
+      }
+
+      h4 {
+        padding: 0px 0px 0 10px;
+        font-size: 16px;
+        color: var(--text-green);
+      }
+
+      div {
+        margin: 8px 0;
+        border: 1px solid var(--text-green);
+        padding: 2px 7px;
+        border-radius: 20px;
+        width: 160px;
+        background-color: #009a641c;
+        font-size: 13px;
+        margin-left: 10px;
+      }
+
+      button {
+        margin: 10px 0px 0 10px;
+        width: 95%;
+        border: 1px solid var(--text-green);
+        background: linear-gradient(to right, #15db96ee, #009a64e1);
+        border-radius: 30px;
+        color: white ;
+        padding: 7px 0;
+
+      }
     }
   }
 }

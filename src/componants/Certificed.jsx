@@ -7,15 +7,21 @@ import C5 from '../images/C5.webp'
 import C6 from '../images/C6.webp'
 import C7 from '../images/C6.webp'
 import { GoDotFill } from "react-icons/go";
+import { MdHorizontalRule } from "react-icons/md";
 
 function Certificed() {
   return (
-    <div className='certificedSection'>
-      <h1>CERTIFIED & EXCELLENCE</h1>
+    <div className='certificedSection' >
+      <h1>
+        <MdHorizontalRule className='line' />
+        CERTIFIED & EXCELLENCE
+        <MdHorizontalRule className='line' />
+
+      </h1>
       <p>Government recognized and internationally accredited healthcare standards</p>
       <div className="tagline"><GoDotFill className='dot' /> OFFICIALLY CERTIFIED</div>
       <div className="certificates_list">
-        <marquee behavior="scroll" direction="left" scrollamount="30" pauseOnHover={true}  >
+        <marquee behavior="scroll" direction="left" scrollamount="15" pauseOnHover={true}  >
 
           <div className="merquee d-flex gap-5" >
             <div className="certificate">
