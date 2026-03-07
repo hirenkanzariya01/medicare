@@ -12,7 +12,6 @@ main {
   width: 650px;
   height: 70%;
   /* overflow: hidden; */
-  border: 1px solid #193CB8;
   border-radius: 20px;
   mask-image: linear-gradient(to bottom,
       transparent,
@@ -20,28 +19,37 @@ main {
       transparent);
 
   h1 {
-    border: 1px solid #193CB8;
+    /* border: 1px solid #1447E6; */
 
-    background-color: #d1e5ff;
     text-align: center;
     z-index: 100 !important;
     font-size: 20px;
-    color: #193CB8;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 8px 0;
   }
+}
+
+.slider1 {
+  border: 1px solid #1447E6
+}
+
+.slider2 {
+  border: 2px solid #25DC9C !important;
 }
 
 .review {
   display: flex;
   gap: 20px;
-  border-left: 3px solid #193CB8;
+
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 18px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   padding: 10px 10px;
   border-radius: 20px;
-  /* margin: 20px 0; */
+  /* padding: 20px 0 !important; */
 
   .drinfo {
     display: flex;
@@ -69,20 +77,47 @@ main {
   height: 100%;
   min-height: calc(var(--height) * var(--quantity));
   position: relative;
+  /* padding: 20px; */
+}
+
+.list1 {
+  .review {
+    border-left: 5px solid #193CB8;
+  }
+
+  h1 {
+    background-color: #DBEAFE;
+    color: #1447E6;
+  }
+}
+
+.list2 {
+
+  .review {
+    border-left: 5px solid #25DC9C;
+  }
+
+  h1 {
+    margin: 0;
+    background-color: #DBFCE7;
+    color: #25DC9C;
+  }
 }
 
 .slider .list .item {
-  width: var(--width);
-  height: var(--height);
+  width: 92%;
+  margin: 20px 20px;
+  height: 120px;
   position: absolute;
   top: 100%;
   animation: autoRun 16s linear infinite;
   transition: filter 0.5s;
   animation-delay: calc((16s / var(--quantity)) * (var(--position) - 1) - 16s) !important;
+
 }
 
 .slider .list .item img {
-  z-index: -1;
+  z-index: -1 !important;
   width: 70px;
   height: 70px;
 

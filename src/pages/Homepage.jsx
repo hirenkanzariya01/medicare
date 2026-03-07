@@ -4,7 +4,7 @@ import HeroSection from '../componants/HeroSection.jsx'
 import Certificed from '../componants/Certificed.jsx'
 import Medicalteam from '../componants/Medicalteam.jsx'
 import Review from '../componants/Review.jsx'
-
+import Footer from '../componants/Footer.jsx'
 
 function Homepage() {
   return (
@@ -16,7 +16,7 @@ function Homepage() {
       <Medicalteam />
 
       <Review />
-      <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, similique rem aliquid error dolorum eaque eum neque fugit, tempora atque fugiat doloremque animi. Molestiae, iste nisi quam vero quaerat animi.</h1>
+      <Footer />
     </div>
   )
 }

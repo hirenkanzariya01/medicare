@@ -14,12 +14,14 @@ function Review() {
       <h1 style={{ textAlign: "center", fontSize: "52px" }}>Voices of Trust</h1>
       <p style={{ textAlign: "center", fontSize: "20px" }}>Real stories from doctors and patients sharing their positive experiences with our healthcare platform</p>
       <main>
+
         <div
-          className="slider"
-          style={{ "--height": "150px", "--quantity": "10" }}
+          className="slider slider1"
+          style={{ "--height": "160px", "--quantity": "10" }}
         >
-          <h1>Medical Proffessionals </h1>
-          <div className="list">
+          <div className="list list1">
+            <h1>👩‍⚕️ Medical Professionals</h1>
+
             <div className="item" style={{ "--position": 1 }}>
               <div className="review">
                 <div className="profilePic">
@@ -256,11 +258,13 @@ function Review() {
         </div>
 
         <div
-          className="slider"
+          className="slider slider2"
           reverse="true"
-          style={{ "--height": "150px", "--quantity": "10" }}
+          style={{ "--height": "160px", "--quantity": "10", "border": "2px solid #DBFCE7" }}
         >
-          <div className="list">
+          <div className="list list2">
+            <h1>🧑‍💼 Patients </h1>
+
             <div className="item" style={{ "--position": 1 }}>
               <div className="review">
                 <div className="profilePic">
