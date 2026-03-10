@@ -1,7 +1,6 @@
 import React from "react";
 import "./Reviews.css";
 import p1 from "../images/review1.avif"
-import p2 from "../images/review2.avif"
 import { FaRegStar } from "react-icons/fa";
 
 
@@ -17,7 +16,7 @@ function Review() {
 
         <div
           className="slider slider1"
-          style={{ "--height": "160px", "--quantity": "10" }}
+          style={{ "--height": "160px", "--quantity": "4" }}
         >
           <div className="list list1">
             <h1>👩‍⚕️ Medical Professionals</h1>
@@ -116,151 +115,15 @@ function Review() {
                 </div>
               </div>
             </div>
-            <div className="item" style={{ "--position": 5 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 6 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 7 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 8 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 9 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 10 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
+            
+           
           </div>
         </div>
 
         <div
           className="slider slider2"
           reverse="true"
-          style={{ "--height": "160px", "--quantity": "10", "border": "2px solid #DBFCE7" }}
+          style={{ "--height": "160px", "--quantity": "4", "border": "2px solid #DBFCE7" }}
         >
           <div className="list list2">
             <h1>🧑‍💼 Patients </h1>
@@ -357,144 +220,8 @@ function Review() {
                 </div>
               </div>
             </div>
-            <div className="item" style={{ "--position": 5 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 6 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 7 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 8 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 9 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
-            <div className="item" style={{ "--position": 10 }}>
-              <div className="review">
-                <div className="profilePic">
-                  <img src={p1} alt="" />
-                </div>
-                <div className="text">
-                  <div className="drinfo">
-                    <div className="name">
-                      <h5>Dr. Robert Martinez</h5>
-                      <h6>Pediatrician</h6>
-                    </div>
-                    <div className="stars">
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                      <FaRegStar className="text-warning" />
-                    </div>
-                  </div>
-                  <p>"The appointment booking system is incredibly efficient. It saves me valuable time and helps me focus on patient care."</p>
-                </div>
-              </div>
-            </div>
+           
+           
           </div>
         </div>
       </main>
