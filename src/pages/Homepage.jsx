@@ -9,7 +9,7 @@ import Footer from '../componants/Footer.jsx'
 function Homepage() {
   return (
     <div>
-      <Navbar />
+     
       <HeroSection />
       <hr style={{ color: "#15db96ee", border: "3px solid", padding: "0px" }} />
       <Certificed />

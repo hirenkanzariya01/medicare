@@ -6,7 +6,7 @@ import logo from '../images/logo.webp'
 import { CiUser } from "react-icons/ci";
 import { FiKey } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa";
-
+import { NavLink } from 'react-router-dom'
 
 function BootstrapNavbar() {
   return (
@@ -20,12 +20,12 @@ function BootstrapNavbar() {
           </div>
         </div>
 
-        <Nav className="navBarLinks">
-          <Nav.Link href="#features">Home</Nav.Link>
-          <Nav.Link href="#pricing">doctor</Nav.Link>
-          <Nav.Link href="#pricing">Services</Nav.Link>
-          <Nav.Link href="#pricing">Appoiments</Nav.Link>
-          <Nav.Link href="#pricing">Contact</Nav.Link>
+        <Nav className="navBarLinks py-1" >
+          <NavLink to="/" className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >Home</NavLink>
+          <NavLink to="/doctors" className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >Doctor</NavLink>
+          <NavLink to="/service" className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >Services</NavLink>
+          <NavLink to="/appoiments" className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >Appoiment</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >Contact</NavLink>
         </Nav>
         <div className='navButtons'>
           <button className='AdminBtn'><FaRegUser style={{ margin: "5px" }} />Doctor Admine </button>

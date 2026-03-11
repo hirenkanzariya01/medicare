@@ -73,21 +73,23 @@ function Footer() {
             <div className="icon"><LuYoutube /></div>
           </div>
         </div>
+        <div className="animatedIcon1">
+          <FaStethoscope />
+        </div>
+        <div className="animatedIcon2">
+          <TbActivity />
+
+        </div>
+        <div className="animatedIcon3">
+          <BiInjection />
+        </div>
       </div>
+      <hr style={{ margin: "0px 130px " }} />
       <div className="copyright">
         <p>© 2026 MediCare Healthcare.</p>
         <p>Develope by Hiren k. </p>
       </div>
-      <div className="animatedIcon1">
-        <FaStethoscope />
-      </div>
-      <div className="animatedIcon1">
-        <TbActivity />
 
-      </div>
-      <div className="animatedIcon1">
-        <BiInjection />
-      </div>
     </div>
   )
 }
