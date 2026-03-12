@@ -2,7 +2,6 @@ import React from 'react'
 import dr1 from '../images/dr1.png'
 import dr2 from '../images/dr2.svg'
 import { FaAnglesRight } from "react-icons/fa6";
-
 import { CiMedal } from "react-icons/ci";
 
 
