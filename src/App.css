@@ -705,34 +705,34 @@
       }
     }
   }
-  
+
 }
 
-  .blob1 {
-    width: 350px;
-    height: 350px;
-    background-color: #009a647b;
-    border-radius: 50%;
-    position: absolute;
-    top: -100px;
-    right: 50px;
-    filter: blur(50px);
-    animation: blobanimation 8s infinite;
-  }
+.blob1 {
+  width: 350px;
+  height: 350px;
+  background-color: #009a647b;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+  right: 50px;
+  filter: blur(50px);
+  animation: blobanimation 8s infinite;
+}
 
-  .blob2 {
-    width: 250px;
-    height: 250px;
-    background-color: #009a647b;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -100px;
-    left: -20px;
-    z-index: 1;
-    filter: blur(50px);
-    animation: blobanimation 8s infinite;
-    animation-delay: 3s;
-  }
+.blob2 {
+  width: 250px;
+  height: 250px;
+  background-color: #009a647b;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  left: -20px;
+  z-index: 1;
+  filter: blur(50px);
+  animation: blobanimation 8s infinite;
+  animation-delay: 3s;
+}
 
 @keyframes blobanimation {
   0% {
@@ -744,7 +744,54 @@
   }
 
   100% {
-    background-color:#009a647b
+    background-color: #009a647b
   }
 }
 
+
+
+
+/*  contant page  */
+.contactpage {
+  padding: 50px 130px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  .left {
+    border: 1px solid #009A63;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+  }
+
+  .right {
+    .first {
+      border: 1px solid #009A63;
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    .second {
+      border: 1px solid #009A63;
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    .third {
+      background-color: #ADF2D3;
+      border: 1px solid #009A63;
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+  }
+}
