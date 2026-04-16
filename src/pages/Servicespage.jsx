@@ -6,6 +6,7 @@ import { FaAnglesRight } from "react-icons/fa6";
 import { CiMedal } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import Footer from '../componants/Footer';
+import Navbar from '../componants/Navbar.jsx'
 
 function Servicespage() {
 
@@ -49,6 +50,7 @@ function Servicespage() {
 
   return (
     <>
+    <Navbar />
       <div className='drpage'>
         <h1>Our Diagnostic Services</h1>
         <p>Safe, accurate & reliable testing.</p>

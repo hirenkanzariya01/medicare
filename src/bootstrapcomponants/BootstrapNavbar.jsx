@@ -39,7 +39,7 @@ function BootstrapNavbar() {
         </Nav>
         <div className='navButtons'>
           <button className='AdminBtn' onClick={() => {
-          handleBtnClick('/doctor-login')
+            handleBtnClick('/doctor-login')
           }}><FaRegUser style={{ margin: "5px" }} />Doctor Admin </button>
           <button className='loginBtn px-3'><FiKey style={{ margin: "5px" }} />Login</button>
         </div>

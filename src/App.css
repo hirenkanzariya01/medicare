@@ -965,7 +965,18 @@
   justify-content: center;
   align-items: center;
   background-color: #CEFAE3;
-  height: 86vh;
+  height: 100vh;
+  position: relative;
+
+  .backLink{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #006045;
+    font-weight: 700;
+  }
 }
 
 /* Box styling */
@@ -1019,3 +1030,13 @@
   background: linear-gradient(to right, #14e79dee, #018456e1);
 
 }
+
+
+/* Doctor Profile page start */
+
+
+
+
+
+
+/* Doctor Profile page End*/

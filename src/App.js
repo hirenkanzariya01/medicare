@@ -4,10 +4,9 @@ import DoctorsPage from './pages/Doctorspage'
 import ServicesPage from './pages/Servicespage'
 import Appoimentspage from './pages/Appoimentspage'
 import ContactPage from './pages/Contactpage'
-import Navbar from './componants/Navbar'
-import Footer from './componants/Footer'
-import DoctorLogin from './pages/DoctorLogin'
 
+import DoctorLogin from './pages/DoctorLogin'
+import DoctorProfile from './pages/DoctorProfile'
 // https://doctor-frontend-141j.onrender.com/
 
 
@@ -16,7 +15,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/doctors" element={<DoctorsPage />} />
@@ -24,6 +22,7 @@ function App() {
         <Route path="/appoiments" element={<Appoimentspage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path='/doctor-login' element={<DoctorLogin />} />
+        <Route path = '/doctor-profile' element={<DoctorProfile />} />
       </Routes>
     
     </BrowserRouter>

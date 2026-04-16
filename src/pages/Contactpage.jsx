@@ -7,10 +7,12 @@ import { MdOutlineMedicalServices } from "react-icons/md";
 import { LuMessageSquareText } from "react-icons/lu";
 import { FaTelegramPlane } from "react-icons/fa";
 import Footer from '../componants/Footer'
+import Navbar from '../componants/Navbar.jsx'
 
 function Contactpage() {
   return (
     <>
+    <Navbar />
     <div className='contactpage'>
       <div className="left">
         <h1>Contact Our Clinic</h1>

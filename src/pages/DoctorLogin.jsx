@@ -1,5 +1,8 @@
 import React from 'react'
 import Logo from '../images/logo.webp'
+import { NavLink } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa6";
+
 function DoctorLogin() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -11,7 +14,9 @@ function DoctorLogin() {
   };
 
   return (
+  <>
     <div className="login-container">
+    <NavLink to='/' className='backLink'><FaArrowLeft /> Back to Home</NavLink>
       <form className="login-box" onSubmit={handleSubmit}>
         <img src={Logo} width='120px' alt="logo image" />
         <h2>Doctor Admin</h2>
@@ -35,6 +40,7 @@ function DoctorLogin() {
         <button type="submit">Login</button>
       </form>
     </div>
+  </>
   );
 }
 
