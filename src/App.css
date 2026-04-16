@@ -956,3 +956,66 @@
     animation-delay: 3s;
   }
 }
+
+
+/* Doctor login page  */
+/* Full screen center */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CEFAE3;
+  height: 86vh;
+}
+
+/* Box styling */
+.login-box {
+  background: #ffffff92;
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title */
+.login-box h2 {
+  margin-bottom: 10px;
+  color: #006045;
+}
+
+.login-box p {
+  margin-bottom: 10px;
+  color: #009A63;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #15db96ee;
+}
+
+/* Button */
+.login-box button {
+  margin: 10px 0px 0 10px;
+  width: 95%;
+  border: 1px solid var(--text-green);
+  background: linear-gradient(to right, #15db96ee, #009a64e1);
+  border-radius: 30px;
+  color: white;
+  padding: 7px 0;
+}
+
+.login-box button:hover {
+  background: linear-gradient(to right, #14e79dee, #018456e1);
+
+}

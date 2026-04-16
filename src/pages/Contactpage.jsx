@@ -6,9 +6,11 @@ import { MdOutlineMyLocation } from "react-icons/md";
 import { MdOutlineMedicalServices } from "react-icons/md";
 import { LuMessageSquareText } from "react-icons/lu";
 import { FaTelegramPlane } from "react-icons/fa";
+import Footer from '../componants/Footer'
 
 function Contactpage() {
   return (
+    <>
     <div className='contactpage'>
       <div className="left">
         <h1>Contact Our Clinic</h1>
@@ -81,6 +83,8 @@ function Contactpage() {
       <div className="blob3"></div>
       <div className="blob4"></div>
     </div>
+    <Footer />
+    </>
   )
 }
 

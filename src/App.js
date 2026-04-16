@@ -6,7 +6,7 @@ import Appoimentspage from './pages/Appoimentspage'
 import ContactPage from './pages/Contactpage'
 import Navbar from './componants/Navbar'
 import Footer from './componants/Footer'
-
+import DoctorLogin from './pages/DoctorLogin'
 
 // https://doctor-frontend-141j.onrender.com/
 
@@ -23,9 +23,9 @@ function App() {
         <Route path="/service" element={<ServicesPage />} />
         <Route path="/appoiments" element={<Appoimentspage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path='/doctor-login' element={<DoctorLogin />} />
       </Routes>
-      <Footer />
-
+    
     </BrowserRouter>
   )
 }

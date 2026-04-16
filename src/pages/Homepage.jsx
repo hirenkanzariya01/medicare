@@ -16,6 +16,7 @@ function Homepage() {
       <Medicalteam />
 
       <Review />
+        <Footer />
     </div>
   )
 }

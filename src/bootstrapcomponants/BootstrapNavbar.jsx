@@ -7,8 +7,18 @@ import { CiUser } from "react-icons/ci";
 import { FiKey } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa";
 import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 
 function BootstrapNavbar() {
+  const navigate = useNavigate()
+
+
+  const handleBtnClick = (path) => {
+    console.log('btn is click ')
+    navigate(path)
+  }
+
   return (
     <Navbar collapseOnSelect expand="lg" >
       <Container className='navContainer'>
@@ -28,7 +38,9 @@ function BootstrapNavbar() {
           <NavLink to="/contact" className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >Contact</NavLink>
         </Nav>
         <div className='navButtons'>
-          <button className='AdminBtn'><FaRegUser style={{ margin: "5px" }} />Doctor Admine </button>
+          <button className='AdminBtn' onClick={() => {
+          handleBtnClick('/doctor-login')
+          }}><FaRegUser style={{ margin: "5px" }} />Doctor Admin </button>
           <button className='loginBtn px-3'><FiKey style={{ margin: "5px" }} />Login</button>
         </div>
       </Container>
