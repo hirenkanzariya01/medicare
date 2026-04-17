@@ -968,7 +968,7 @@
   height: 100vh;
   position: relative;
 
-  .backLink{
+  .backLink {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -1035,7 +1035,101 @@
 /* Doctor Profile page start */
 
 
+.mainDoctorProfile {
+  background: linear-gradient(#EDFDF5, white);
 
+  header {
+    padding: 5px 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: white;
+
+    .backbtn {
+      color: #009A63;
+      box-shadow: 0px 0px 5px var(--text-green);
+      padding: 5px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 30px;
+      height: 40px;
+
+      &:hover {
+        background-color: #009a640e;
+      }
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #009A63;
+    }
+
+    p {
+      box-shadow: 0px 0px 5px var(--text-green);
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .profile {
+    margin: 30px 130px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 20px;
+    padding: 50px;
+
+    .first {
+      width: 40%;
+
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px var(--text-green);
+        border: 5px solid white;
+      }
+
+      .aboutDr {
+        display: flex;
+        gap: 20px;
+        border-radius: 20px;
+        margin: 30px 0;
+
+        .first {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          border-radius: 20px;
+          padding: 10px;
+          width: 25%;
+
+          h2{
+            font-size: 22px;
+          }
+          .icon{
+            font-size: 20PX;
+          }
+        }
+      }
+
+    }
+
+    .second {
+      width: 60%;
+    }
+  }
+}
 
 
 

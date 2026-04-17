@@ -5,8 +5,12 @@ import { useLocation } from 'react-router-dom';
 import user from '../images/user.avif'
 import { CiHeart } from "react-icons/ci";
 import { PiMedal } from "react-icons/pi";
-
+import { PiGraduationCapLight } from "react-icons/pi";
 import { TbUsers } from "react-icons/tb";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { FaIndianRupeeSign } from "react-icons/fa6";
+import { IoTimeOutline } from "react-icons/io5";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 
 
 function DoctorProfile() {
@@ -29,9 +33,9 @@ function DoctorProfile() {
   //     },
 
   return (
-    <div>
+    <div className='mainDoctorProfile'>
       <header>
-        <NavLink to="/doctors"><FaArrowLeft /> Back</NavLink>
+        <NavLink to="/doctors" className="backbtn"><FaArrowLeft /> Back</NavLink>
         <h1>Doctor Profile</h1>
         <p>{data?.rating || 0}</p>
       </header>
@@ -41,25 +45,66 @@ function DoctorProfile() {
 
           <div className="aboutDr">
             <div className="first">
-              <CiHeart />
+              <CiHeart className='icon' />
               <h2>{data.successRate || 0}</h2>
               <p>Success</p>
             </div>
             <div className="first">
-              <PiMedal />
+              <PiMedal className='icon' />
               <h2>{data.experience || 0}</h2>
 
               <p>Experience</p>
             </div>
             <div className="first">
-              <TbUsers />
+              <TbUsers className='icon' />
 
               <h2>{data.patients || 0}</h2>
               <p>Patients</p>
             </div>
           </div>
         </div>
-        <div className="second"></div>
+        <div className="second">
+          <h2>{data.name}</h2>
+          <p>{data.dept}</p>
+          <div className="details">
+            <div className="d">
+              <div className="icon"><MdOutlineLocationOn /></div>
+              <div>
+                <p>Location</p>
+                <p>{data.location}</p>
+              </div>
+            </div>
+
+            <div className="d">
+              <div className="icon"><PiGraduationCapLight /></div>
+              <div>
+                <p>Qualifications</p>
+                <p>{data.qualifications}</p>
+              </div>
+            </div>
+
+            <div className="d">
+              <div className="icon"><FaIndianRupeeSign /></div>
+              <div>
+                <p>Consultation Fee</p>
+                <p>{data.consultationFee}</p>
+              </div>
+            </div>
+
+            <div className="d">
+              <div className="icon"><IoTimeOutline /></div>
+              <div>
+                <p>Availability</p>
+                <p>{data.qualifications}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="aboutDr">
+            <h2><IoIosInformationCircleOutline ></IoIosInformationCircleOutline>About Doctor</h2>
+            <p>{data.about}</p>
+          </div>
+        </div>
       </div>
     </div>
   )
