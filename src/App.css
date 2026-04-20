@@ -1089,23 +1089,27 @@
 
     .first {
       width: 40%;
+      display: flex;
+      flex-direction: column;
 
       img {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         box-shadow: 0px 0px 5px var(--text-green);
         border: 5px solid white;
+        margin: 20px auto;
       }
 
       .aboutDr {
         display: flex;
-        gap: 20px;
+        /* gap: 20px; */
+        justify-content: space-evenly;
         border-radius: 20px;
         margin: 30px 0;
 
         .first {
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1113,20 +1117,107 @@
           border-radius: 20px;
           padding: 10px;
           width: 25%;
+          transition: 0.3s;
 
-          h2{
-            font-size: 22px;
+
+          h2 {
+            font-size: 20px;
           }
-          .icon{
-            font-size: 20PX;
+
+          .icon1 {
+            font-size: 30px !important;
+            margin: 10px 0;
+            color: #FE807F;
+            font-weight: 900;
+          }
+
+          .icon2 {
+            font-size: 30px !important;
+            margin: 10px 0;
+            color: #FB9800;
+          }
+
+          .icon3 {
+            font-size: 30px !important;
+            margin: 10px 0;
+            color: #40CD9E;
+          }
+
+          p {
+            font-size: 12px;
+          }
+
+
+          &:hover {
+            transform: translateY(-10px);
           }
         }
+
       }
 
     }
 
     .second {
       width: 60%;
+
+      .drName {
+        font-size: 25px;
+        color: #009A63;
+      }
+
+      .drDept {
+        padding: 5px 20px;
+        border-radius: 30px;
+        background: linear-gradient(#00D490, #00C951);
+        width: fit-content;
+        color: white;
+        font-size: 14px;
+        margin: 20px 0;
+      }
+
+      .details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+
+        .d {
+          width: 47%;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 5px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          border-radius: 50px;
+          display: flex;
+          padding: 14px 20px;
+
+          .icon {
+            font-size: 25px;
+            color: #009A63;
+          }
+
+          p {
+            margin: 0;
+            margin-left: 10px;
+          }
+
+          p:first-child {
+            color: #009A63;
+            font-weight: 700;
+          }
+        }
+
+      }
+
+      .aboutDr {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 5px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        padding: 20px 20px;
+        margin-top: 50px;
+        border-radius: 20px;
+
+        h2 {
+          font-size: 20px;
+          color: #009A63;
+          font-weight: 700
+        }
+      }
     }
   }
 }

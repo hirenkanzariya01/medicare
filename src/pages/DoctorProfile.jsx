@@ -11,6 +11,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { BsLightningCharge } from "react-icons/bs";
 
 
 function DoctorProfile() {
@@ -33,7 +34,7 @@ function DoctorProfile() {
   //     },
 
   return (
-    <div className='mainDoctorProfile'>
+    <div className='mainDoctorProfile' >
       <header>
         <NavLink to="/doctors" className="backbtn"><FaArrowLeft /> Back</NavLink>
         <h1>Doctor Profile</h1>
@@ -45,18 +46,18 @@ function DoctorProfile() {
 
           <div className="aboutDr">
             <div className="first">
-              <CiHeart className='icon' />
+              <CiHeart className='icon1' />
               <h2>{data.successRate || 0}</h2>
               <p>Success</p>
             </div>
             <div className="first">
-              <PiMedal className='icon' />
+              <PiMedal className='icon2'  />
               <h2>{data.experience || 0}</h2>
 
               <p>Experience</p>
             </div>
             <div className="first">
-              <TbUsers className='icon' />
+              <TbUsers className='icon3' />
 
               <h2>{data.patients || 0}</h2>
               <p>Patients</p>
@@ -64,8 +65,8 @@ function DoctorProfile() {
           </div>
         </div>
         <div className="second">
-          <h2>{data.name}</h2>
-          <p>{data.dept}</p>
+          <h2 className='drName'>{data.name}</h2>
+          <p className='drDept'><BsLightningCharge className='me-2' />{data.dept}</p>
           <div className="details">
             <div className="d">
               <div className="icon"><MdOutlineLocationOn /></div>
@@ -101,7 +102,7 @@ function DoctorProfile() {
           </div>
 
           <div className="aboutDr">
-            <h2><IoIosInformationCircleOutline ></IoIosInformationCircleOutline>About Doctor</h2>
+            <h2><IoIosInformationCircleOutline /> About Doctor</h2>
             <p>{data.about}</p>
           </div>
         </div>
