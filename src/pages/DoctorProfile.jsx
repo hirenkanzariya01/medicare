@@ -12,27 +12,18 @@ import { FaIndianRupeeSign } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { BsLightningCharge } from "react-icons/bs";
+import Calendar from 'react-calendar'
+import { useState } from 'react';
+import 'react-calendar/dist/Calendar.css';
+import Appoinments from '../componants/Appoinments';
+// type ValuePiece = Date | null;
 
+// type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 function DoctorProfile() {
   const location = useLocation()
   const data = location.state
-
-  // {
-  //       id: 3,
-  //       Image: dr1,
-  //       name: "Dr Rohit",
-  //       dept: "Pediatrics",
-  //       experience: "5 Years",
-  //       successRate: "88%",
-  //       patients: 60,
-  //       qualifications: "MBBS, DCH",
-  //       location: "Rajkot",
-  //       consultationFee: "₹300",
-  //       availability: "Unavailable",
-  //       about: "Focused on child wellness and preventive care."
-  //     },
-
+  const [value, onChange] = useState(new Date());
   return (
     <div className='mainDoctorProfile' >
       <header>
@@ -51,7 +42,7 @@ function DoctorProfile() {
               <p>Success</p>
             </div>
             <div className="first">
-              <PiMedal className='icon2'  />
+              <PiMedal className='icon2' />
               <h2>{data.experience || 0}</h2>
 
               <p>Experience</p>
@@ -107,6 +98,44 @@ function DoctorProfile() {
           </div>
         </div>
       </div>
+
+      {/* <div className="appoinment_section">
+        <div className="first">
+          <h1>Book Your Appointment</h1>
+          <h2>Select Date</h2>
+          <Calendar onChange={onChange} value={value} />
+
+          <div className="detailsForm">
+            <h2>Patient Details</h2>
+            <input type="text" placeholder='Enter Name' />
+            <input type="number" placeholder='Enter Age' />
+            <input type="text" placeholder='Enter Mobile Number' />
+            <input type="text" placeholder='Enter Gender' />
+            <input type="text" placeholder='enter Email (optional for fee recipt )' />
+          </div>
+        </div>
+        <div className="second">
+          Available Time Slots
+
+          8:00 AM
+          Selected Doctor:
+          gh
+          Doctor Speciality:
+          nm
+          Selected Date:
+          Tuesday, April 14, 2026
+          Selected Time:
+          Not selected
+          Consultation Fee:
+          ₹6
+          Payment:
+          Cash
+          Online
+
+          Confirm Booking
+        </div>
+      </div> */}
+      <Appoinments />
     </div>
   )
 }

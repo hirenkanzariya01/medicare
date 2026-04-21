@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600&display=swap');
+
+:root {
+  --green: #009A63;
+  --green-light: #15db96;
+  --green-pale: #EDFDF5;
+  --green-mid: #009a641b;
+  --green-border: #009a6440;
+  --green-deep: #006045;
+  --text-dark: #1a2e24;
+  --text-muted: #4a7a62;
+  --white: #ffffff;
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-pill: 50px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.page-title {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--green-deep);
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.page-title span {
+  color: var(--green);
+}
+
+.appointment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* max-width: 900px; */
+  padding: 0 130px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  border: 1px solid var(--green-border);
+}
+
+.card1,
+.card2 {
+  width: 45%;
+  margin: 0 10px;
+}
+
+.card3 {
+  width: 100%;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  background: linear-gradient(to right, var(--green-light), var(--green));
+  border-radius: 2px;
+}
+
+/* Calendar */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.month-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--green-deep);
+}
+
+.nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--green-border);
+  background: var(--green-mid);
+  color: var(--green);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  background: var(--green);
+  color: white;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.cal-day-name {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 6px 0;
+  letter-spacing: 0.5px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: all 0.15s;
+  border: 1.5px solid transparent;
+}
+
+.cal-day:hover:not(.empty):not(.past) {
+  background: var(--green-mid);
+  border-color: var(--green-border);
+  color: var(--green-deep);
+}
+
+.cal-day.today {
+  background: var(--green-mid);
+  border-color: var(--green-border);
+  color: var(--green);
+  font-weight: 800;
+}
+
+.cal-day.selected {
+  background: linear-gradient(135deg, var(--green-light), var(--green));
+  color: white;
+  border-color: transparent;
+  font-weight: 800;
+}
+
+.cal-day.past {
+  color: #ccc;
+  cursor: default;
+}
+
+.cal-day.empty {
+  cursor: default;
+}
+
+/* Time Slots */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.slot {
+  padding: 9px 6px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--green-border);
+  background: var(--green-mid);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green-deep);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.slot:hover {
+  background: var(--green);
+  color: white;
+  border-color: transparent;
+}
+
+.slot.selected {
+  background: linear-gradient(135deg, var(--green-light), var(--green));
+  color: white;
+  border-color: transparent;
+}
+
+.slot.unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Form */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 42px;
+  border: 1.5px solid var(--green-border);
+  border-radius: var(--radius-pill);
+  padding: 0 14px;
+  font-size: 13px;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-dark);
+  background: #F4FEF9;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px #009a6420;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+/* Summary card */
+.summary-card {
+  background: var(--green-pale);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--green-border);
+  padding: 16px;
+  margin-top: 4px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--green-border);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.summary-value {
+  color: var(--green-deep);
+  font-weight: 700;
+}
+
+.summary-value.fee {
+  color: var(--green);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* Payment toggle */
+.payment-toggle {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.pay-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--green-border);
+  background: var(--green-mid);
+  color: var(--green-deep);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s;
+  font-family: 'Outfit', sans-serif;
+}
+
+.pay-btn.active {
+  background: linear-gradient(135deg, var(--green-light), var(--green));
+  color: white;
+  border-color: transparent;
+}
+
+.pay-btn:hover:not(.active) {
+  background: #d0fae5;
+}
+
+/* Doctor chip */
+.doctor-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--green-mid);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--green-border);
+  margin-bottom: 16px;
+}
+
+.doctor-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-light), var(--green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.doctor-info .name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+.doctor-info .spec {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, var(--green-light), var(--green));
+  border: none;
+  border-radius: var(--radius-pill);
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.confirm-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.confirm-btn:active {
+  transform: translateY(0);
+}
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .appointment-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.right-col {
+  input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: 2px solid #009A63;
+    padding: 0 20px;
+    outline: none;
+  }
+  .SelectBox{
+     width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: 2px solid #009A63;
+    padding: 0 20px;
+    outline: none;
+  }
+}
