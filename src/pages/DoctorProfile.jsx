@@ -135,7 +135,7 @@ function DoctorProfile() {
           Confirm Booking
         </div>
       </div> */}
-      <Appoinments />
+      <Appoinments data={data} />
     </div>
   )
 }

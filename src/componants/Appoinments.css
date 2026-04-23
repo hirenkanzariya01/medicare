@@ -55,13 +55,11 @@
 
 .card1,
 .card2 {
-  width: 45%;
-  margin: 0 10px;
+  width: 47%;
+  margin-right: 10px;
 }
 
-.card3 {
-  width: 100%;
-}
+
 
 .section-label {
   font-size: 11px;
@@ -426,8 +424,9 @@
     padding: 0 20px;
     outline: none;
   }
-  .SelectBox{
-     width: 100%;
+
+  .SelectBox {
+    width: 100%;
     height: 40px;
     font-size: 16px;
     margin: 10px 0;
@@ -436,4 +435,76 @@
     padding: 0 20px;
     outline: none;
   }
+}
+
+.PaymentMode {
+  button {
+    background: linear-gradient(135deg, var(--green-light), var(--green));
+    color: white;
+    border-color: transparent;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 30px;
+    margin: 10px 20px;
+    margin-left: 0 !important;
+  }
+}
+
+.bookingBtn {
+  background: linear-gradient(135deg, var(--green-light), var(--green));
+  color: white;
+  border-color: transparent;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px 20px;
+  margin-left: 0 !important;
+}
+
+.BookingSummary {
+  display: flex;
+  margin: 10px 130px;
+  justify-content: space-between;
+
+  & .card3 {
+    width: 47%;
+  }
+
+
+  & .card4 {
+    width: 49%;
+  }
+}
+
+.reviewsList {
+  margin-top: 10px;
+  overflow-y: auto;
+}
+
+.reviewItem {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  border: 1px solid #009A63;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviewName {
+  font-weight: 600;
+}
+
+.reviewRating {
+  color: #ff9800;
+}
+
+.reviewComment {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
 }

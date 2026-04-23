@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Appoinments.css";
 import Select from "react-dropdown-select";
-function Appoinments() {
+function Appoinments(props) {
   const MONTHS = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
@@ -28,6 +28,10 @@ function Appoinments() {
   const [paymentMode, setPaymentMode] = useState("cash");
 
   const [name, setName] = useState("");
+  const [age, setAge] = useState();
+  const [email, setEmail] = useState('')
+  const [mobile_number, setMobile_number] = useState()
+  const [gender, setGender] = useState()
 
   // 📅 Generate Calendar Days
   const renderCalendar = () => {
@@ -146,6 +150,28 @@ Payment: ${paymentMode}`
       label: 'Other'
     }
   ];
+
+  const reviews = [
+    {
+      id: 1,
+      name: "Rahul Patel",
+      rating: 5,
+      comment: "Very good doctor, explained everything clearly."
+    },
+    {
+      id: 2,
+      name: "Priya Shah",
+      rating: 4,
+      comment: "Nice experience, staff was helpful."
+    },
+    {
+      id: 3,
+      name: "Amit Kumar",
+      rating: 5,
+      comment: "Highly recommended!"
+    }
+  ];
+
   return (
     <div>
       <p className="page-title">
@@ -204,36 +230,7 @@ Payment: ${paymentMode}`
             </div>
           </div>
 
-          <div className="card card3">
-            <div className="section-label">Booking Summary</div>
 
-            <p>Doctor: Dr. Priya Sharma</p>
-            <p>Patient: {name || "—"}</p>
-            <p>Date: {formattedDate}</p>
-            <p>Time: {selectedSlot || "Not selected"}</p>
-            <p>Fee: ₹400</p>
-
-            {/* Payment */}
-            <div>
-              <button
-                className={paymentMode === "cash" ? "active" : ""}
-                onClick={() => setPaymentMode("cash")}
-              >
-                Cash
-              </button>
-
-              <button
-                className={paymentMode === "online" ? "active" : ""}
-                onClick={() => setPaymentMode("online")}
-              >
-                Online
-              </button>
-            </div>
-
-            <button onClick={confirmBooking}>
-              Confirm Booking
-            </button>
-          </div>
         </div>
 
         {/* RIGHT */}
@@ -250,23 +247,23 @@ Payment: ${paymentMode}`
             <input
               type="text"
               placeholder="age"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
             />
             <input
               type="text"
               placeholder="Email"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="text"
               placeholder="Mobile Number"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={mobile_number}
+              onChange={(e) => setMobile_number(e.target.value)}
             />
 
-            <select name="" id="" className="SelectBox">
+            <select name="" id="" className="SelectBox" onChange={(e) => { setGender(e.target.value) }}>
               <option value="" defaultChecked > Select Gender</option>
               {options.map((e) => {
                 return (
@@ -279,6 +276,64 @@ Payment: ${paymentMode}`
 
           {/* Summary */}
 
+        </div>
+      </div>
+
+      <div className="BookingSummary">
+        <div className="card card3">
+          <div className="section-label">Booking Summary</div>
+
+          <p>Doctor : {props.data.name}</p>
+          <p>Patient Name: {name || "—"}</p>
+          <p>Mobile Number : {mobile_number}</p>
+          <p>Gender : {gender}</p>
+          <p>Date: {formattedDate}</p>
+          <p>Time: {selectedSlot || "Not selected"}</p>
+          <p>Fee: ₹400</p>
+
+          {/* Payment */}
+          <div className="PaymentMode">
+            <button
+              className={paymentMode === "cash" ? "active" : ""}
+              onClick={() => setPaymentMode("cash")}
+            >
+              Cash
+            </button>
+
+            <button
+              className={paymentMode === "online" ? "active" : ""}
+              onClick={() => setPaymentMode("online")}
+            >
+              Online
+            </button>
+          </div>
+
+          <button onClick={confirmBooking} className="bookingBtn">
+            Confirm Booking
+          </button>
+        </div>
+
+        <div className="card card4">
+          <div className="section-label">Doctors Reviews</div>
+
+          <div className="reviewsList">
+            {reviews.length > 0 ? (
+              reviews.map((review) => (
+                <div key={review.id} className="reviewItem">
+                  <div className="reviewHeader">
+                    <span className="reviewName">{review.name}</span>
+                    <span className="reviewRating">
+                      {"⭐".repeat(review.rating)}
+                    </span>
+                  </div>
+
+                  <p className="reviewComment">{review.comment}</p>
+                </div>
+              ))
+            ) : (
+              <p>No reviews yet</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
